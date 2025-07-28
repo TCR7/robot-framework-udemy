@@ -1,0 +1,46 @@
+# Python
+venv/               # Diretórios de ambiente virtual (o mais importante para você!)
+.env                # Arquivos de variáveis de ambiente (contêm segredos!)
+__pycache__/        # Diretórios de cache de bytecode do Python
+*.pyc               # Arquivos de bytecode compilado
+*.pyd               # Módulos Python dinâmicos (Windows)
+.Python             # Pasta criada pelo Python no Windows (se existir)
+build/              # Pasta de build de pacotes
+dist/               # Pasta de distribuição de pacotes
+*.egg               # Arquivos de pacotes Python
+*.egg-info/         # Metadados de pacotes
+.pytest_cache/      # Cache do pytest
+.mypy_cache/        # Cache do MyPy (verificação de tipo)
+
+# Logs
+*.log               # Arquivos de log gerados pela aplicação
+logs/               # Diretório comum para logs
+
+# Dados temporários e de sessão
+*.tmp               # Arquivos temporários
+*.bak               # Arquivos de backup
+*.swp               # Arquivos de swap do Vim
+
+# Resultados de testes/relatórios (se não forem versionados intencionalmente)
+results/            # Se a pasta 'results' armazena apenas saídas de testes que não precisam ser versionadas
+
+# IDEs e Editores de Código (Exemplos comuns)
+.vscode/            # Configurações do VS Code (alguns arquivos podem ser úteis, outros não)
+.idea/              # Pastas do IntelliJ IDEA/PyCharm
+*.iml               # Arquivos de módulo do IntelliJ IDEA
+*.code-workspace    # Arquivos de workspace do VS Code
+
+# Sistema Operacional
+.DS_Store           # Arquivos do macOS para armazenamento de propriedades de pastas
+Thumbs.db           # Cache de miniaturas do Windows
+ehthumbs.db         # Cache de miniaturas de vídeo do Windows
+Desktop.ini         # Arquivos de configuração de pastas do Windows
+
+# Arquivos de bancos de dados locais (se usar SQLite, por exemplo)
+*.db                # Arquivos de banco de dados genéricos (cuidado se seu BD for `.db` e precisar ser versionado)
+*.sqlite3           # Arquivos SQLite específicos
+
+# Arquivos de cache e temporários de pacotes/gerenciadores
+npm-debug.log* # Logs de debug do NPM
+yarn-debug.log* # Logs de debug do Yarn
+yarn-error.log* # Logs de erro do Yarn
