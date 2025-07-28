@@ -42,3 +42,19 @@ Clicar no botão de pesquisa
     Click Element    (//input[@id='nav-search-submit-button'])[1]
 Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    (//span[contains(text(),'${PRODUTO}')])[1]
+
+# ========================================================================================================== #
+# Gherkin BDD
+
+Dado que estou na home page da Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+    Verificar se o Título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
+Quando acessar o menu "Eletrônicos"
+    Entrar no menu "Eletrônicos"
+Então o título da página deve ficar "Eletrõnicos e Tecnologia | Amazon.com.br"
+    Verificar se o Título da página fica "Eletrônicos e Tecnologia | Amazon.com.br"
+E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
+    Verificar se aparece a frase "Eletrônicos e Tecnologia"
+E a categoria "Computadores e Informática" deve ser exibida na página
+     Verificar se aparece a categoria "Computadores e Informática, No momento, você está em um menu suspenso. Para abrir esse menu suspenso, pressione Enter."
+    
