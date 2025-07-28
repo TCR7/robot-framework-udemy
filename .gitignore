@@ -11,6 +11,7 @@ dist/               # Pasta de distribuição de pacotes
 *.egg-info/         # Metadados de pacotes
 .pytest_cache/      # Cache do pytest
 .mypy_cache/        # Cache do MyPy (verificação de tipo)
+./
 
 # Logs
 *.log               # Arquivos de log gerados pela aplicação
