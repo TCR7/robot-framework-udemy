@@ -1,6 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    lib/python3.12/site-packages/robot/libraries/Telnet.py
+Library    SeleniumLibrary 
 
 
 *** Variables ***
@@ -12,7 +11,7 @@ ${HEADER_ELETRONICOS}     (//span[contains(text(),'Eletrônicos e Tecnologia')])
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser    about:blank    chrome    options=add_experimental_option("detach", True)
+    Open Browser    ${URL}    Chrome   
     Maximize Browser Window
 Fechar o navegador
     Capture Page Screenshot
@@ -57,4 +56,13 @@ E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
     Verificar se aparece a frase "Eletrônicos e Tecnologia"
 E a categoria "Computadores e Informática" deve ser exibida na página
      Verificar se aparece a categoria "Computadores e Informática, No momento, você está em um menu suspenso. Para abrir esse menu suspenso, pressione Enter."
+
+# Gherkin BDD Test Case 2
+
+Quando pesquisar pelo produto "Xbox Series S"
+    Digite o nome do produto "Xbox Series S" no campo de Pesquisa
+    Sleep    1
+Então o título da página deve ficar "${PAGE_TITLE}"
+    Verificar se o Título da página fica "${PAGE_TITLE}"
+
     
