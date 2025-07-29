@@ -1,47 +1,210 @@
-# Python
-venv/               # Diretórios de ambiente virtual (o mais importante para você!)
-.env                # Arquivos de variáveis de ambiente (contêm segredos!)
-__pycache__/        # Diretórios de cache de bytecode do Python
-*.pyc               # Arquivos de bytecode compilado
-*.pyd               # Módulos Python dinâmicos (Windows)
-.Python             # Pasta criada pelo Python no Windows (se existir)
-build/              # Pasta de build de pacotes
-dist/               # Pasta de distribuição de pacotes
-*.egg               # Arquivos de pacotes Python
-*.egg-info/         # Metadados de pacotes
-.pytest_cache/      # Cache do pytest
-.mypy_cache/        # Cache do MyPy (verificação de tipo)
-./
+# ############################################################################
+# ## .gitignore geral e abrangente                                          ##
+# ##                                                                        ##
+# ## Inspirado em github.com/github/gitignore e gitignore.io                ##
+# ##                                                                        ##
+# ## Instruções:                                                            ##
+# ## 1. Copie este conteúdo para um arquivo chamado .gitignore na raiz do   ##
+# ##    seu repositório.                                                    ##
+# ## 2. Descomente as seções que são relevantes para o seu projeto.         ##
+# ## 3. Adicione quaisquer arquivos ou diretórios específicos do seu        ##
+# ##    projeto que você deseja ignorar.                                    ##
+# ############################################################################
 
-# Logs
-*.log               # Arquivos de log gerados pela aplicação
-logs/               # Diretório comum para logs
+# ################################
+# ## Arquivos de Sistema Operacional
+# ################################
 
-# Dados temporários e de sessão
-*.tmp               # Arquivos temporários
-*.bak               # Arquivos de backup
-*.swp               # Arquivos de swap do Vim
+Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Resultados de testes/relatórios (se não forem versionados intencionalmente)
-results/            # Se a pasta 'results' armazena apenas saídas de testes que não precisam ser versionadas
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# IDEs e Editores de Código (Exemplos comuns)
-.vscode/            # Configurações do VS Code (alguns arquivos podem ser úteis, outros não)
-.idea/              # Pastas do IntelliJ IDEA/PyCharm
-*.iml               # Arquivos de módulo do IntelliJ IDEA
-*.code-workspace    # Arquivos de workspace do VS Code
+Linux
+*~
+.directory
+.Trash-*
 
-# Sistema Operacional
-.DS_Store           # Arquivos do macOS para armazenamento de propriedades de pastas
-Thumbs.db           # Cache de miniaturas do Windows
-ehthumbs.db         # Cache de miniaturas de vídeo do Windows
-Desktop.ini         # Arquivos de configuração de pastas do Windows
+# ################################
+# ## Ambientes de Desenvolvimento e Editores
+# ################################
 
-# Arquivos de bancos de dados locais (se usar SQLite, por exemplo)
-*.db                # Arquivos de banco de dados genéricos (cuidado se seu BD for `.db` e precisar ser versionado)
-*.sqlite3           # Arquivos SQLite específicos
+Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
 
-# Arquivos de cache e temporários de pacotes/gerenciadores
-npm-debug.log* # Logs de debug do NPM
-yarn-debug.log* # Logs de debug do Yarn
-yarn-error.log* # Logs de erro do Yarn
+# JetBrains (IntelliJ, PyCharm, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+packages/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# ################################
+# ## Linguagens de Programação e Frameworks
+# ################################
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+/dist/
+/build/
+.npm
+.pnp.*
+
+Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+/build/
+/develop-eggs/
+/dist/
+/downloads/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+/wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+/instance/
+/.env
+.venv/
+env/
+venv/
+ENV/
+env.bak
+venv.bak
+.pytest_cache/
+.coverage
+.tox/
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+/target/
+.gradle
+build/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Ruby / Rails
+.bundle/
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+*.gem
+/.config
+/coverage/
+/spec/reports/
+/public/assets
+.byebug_history
+
+# PHP / Composer
+/vendor/
+composer.lock
+composer.phar
+.php-cs-fixer.cache
+.php_cs.cache
+
+# ################################
+# ## Outros Arquivos Comuns a Ignorar
+# ################################
+
+Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.png
+
+# Arquivos de dependências e pacotes
+/node_modules
+/bower_components
+/jspm_packages
+
+# Arquivos de build e de saída
+/build
+/dist
+/out
+/public
+
+Arquivos de configuração de ambiente local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+! .env.example
+
+# Arquivos de senhas e chaves (NUNCA versione segredos)
+*.pem
+*.key
+credentials.json
+secrets.yml
+
+# Arquivos de banco de dados
+*.sqlite
+*.db
+
+Arquivos de upload de mídia
+/uploads/
+
+Arquivos de cache
+.cache/
