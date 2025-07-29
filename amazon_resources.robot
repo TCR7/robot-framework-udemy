@@ -32,12 +32,12 @@ Verificar se aparece a categoria "${CATEGORY_NAME}"
 # ========================================================================================================= #
 
 # Teste 2 #
-Digite o nome do produto ${PRODUTO} no campo de Pesquisa
+Digite o nome do produto "${PRODUTO}" no campo de Pesquisa
     Sleep    1
     Click Element    (//input[@id='twotabsearchtextbox'])[1]
     Input Text    (//input[@id='twotabsearchtextbox'])[1]    ${PRODUTO}
 Clicar no botão de pesquisa
-    Sleep    1
+    Sleep    0.2
     Click Element    (//input[@id='nav-search-submit-button'])[1]
 Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    (//span[contains(text(),'${PRODUTO}')])[1]
@@ -59,10 +59,12 @@ E a categoria "Computadores e Informática" deve ser exibida na página
 
 # Gherkin BDD Test Case 2
 
-Quando pesquisar pelo produto "Xbox Series S"
+Quando pesquisar pelo produto Xbox Series S
     Digite o nome do produto "Xbox Series S" no campo de Pesquisa
-    Sleep    1
+    Clicar no botão de pesquisa
 Então o título da página deve ficar "${PAGE_TITLE}"
     Verificar se o Título da página fica "${PAGE_TITLE}"
+E um produto da linha "Xbox Series S" deve ser mostrado na página
+    Verificar o resultado da pesquisa se está listando o produto "Console Xbox Series S"
 
     

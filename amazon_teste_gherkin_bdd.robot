@@ -20,6 +20,6 @@ Caso de Teste 02 - Pesquisa de Produto
     [Tags]           busca_produtos  lista_busca
 
     Dado que estou na home page da Amazon.com.br
-    Quando pesquisar pelo produto "Xbox Series S"
-    Então o título da página deve ficar "Amazon.com.br | Tudo pra você, de A a Z."
-    # E um produto da linha "Xbox Series S" deve ser mostrado na página
+    Quando pesquisar pelo produto Xbox Series S
+    Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
+    E um produto da linha "Xbox Series S" deve ser mostrado na página
