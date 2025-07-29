@@ -175,6 +175,7 @@ pnpm-debug.log*
 *.png
 *.html
 *.xml
+results/
 
 # Arquivos de dependências e pacotes
 /node_modules
