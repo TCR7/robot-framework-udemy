@@ -172,7 +172,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.png
+*.png
+*.html
+*.xml
 
 # Arquivos de dependências e pacotes
 /node_modules
