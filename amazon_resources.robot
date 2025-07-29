@@ -5,8 +5,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}                    https://www.amazon.com.br
 ${MENU_ELETRONICOS}       (//a[contains(text(),'Eletrônicos')])[1]
-${CLICK_ELETRONICOS}      (//a[contains(text(),'Eletrônicos')])[1]
-#${URL_TITLE}              (//title[normalize-space()='Eletrônicos e Tecnologia | Amazon.com.br'])[1]
+${CLICK_ELETRONICOS}      (//a[contains(text(),'Eletrônicos')])[1]    
 ${HEADER_ELETRONICOS}     (//span[contains(text(),'Eletrônicos e Tecnologia')])[1]
 
 *** Keywords ***
@@ -50,8 +49,8 @@ Dado que estou na home page da Amazon.com.br
     Verificar se o Título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
 Quando acessar o menu "Eletrônicos"
     Entrar no menu "Eletrônicos"
-Então o título da página deve ficar "Eletrõnicos e Tecnologia | Amazon.com.br"
-    Verificar se o Título da página fica "Eletrônicos e Tecnologia | Amazon.com.br"
+Então o título da página deve ficar     ${PAGE_TITLE_URL}
+    Verificar se o Título da página fica ${PAGE_TITLE_URL}
 E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
     Verificar se aparece a frase "Eletrônicos e Tecnologia"
 E a categoria "Computadores e Informática" deve ser exibida na página
