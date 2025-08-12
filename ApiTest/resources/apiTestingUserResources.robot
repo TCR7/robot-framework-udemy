@@ -15,7 +15,7 @@ Register Created User On ServeRest
     ...        nome=Fulano da Silva
     ...        email=${EMAIL_TEST}
     ...        password=1234
-    ...        administrador=${TRUE}
+    ...        administrador=true
     Log    ${body}
     Create Session on ServeRest
     ${response}    POST On Session
