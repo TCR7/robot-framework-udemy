@@ -1,6 +1,7 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    String
+Library    ../../venv/lib/python3.12/site-packages/robot/libraries/Collections.py
 
 *** Keywords ***
 
@@ -23,7 +24,13 @@ Register Created User On ServeRest
     ...            url=/usuarios
     ...            json=${body}
     Log    ${response.json()}
+    Set Test Variable    ${RESPONSE}    ${response.json()}
 
 Create Session on ServeRest
     ${headers}    Create Dictionary    accept=application/json    Content-type=application/json
     Create Session    alias=ServeRest    url=https://serverest.dev    headers=${headers}
+
+Verify If User Was Registered Correctly
+    Log    ${RESPONSE}
+    Dictionary Should Contain Item    ${RESPONSE}    message    Cadastro realizado com sucesso
+    Dictionary Should Contain Key    ${RESPONSE}    _id

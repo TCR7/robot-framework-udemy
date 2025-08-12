@@ -7,4 +7,4 @@ Resource    ../resources/apiTestingUserResources.robot
 Scenario 01 - Register new user with success
     Create New User
     Register Created User On ServeRest
-    # Verify If User Was Registered Correctly
+    Verify If User Was Registered Correctly
